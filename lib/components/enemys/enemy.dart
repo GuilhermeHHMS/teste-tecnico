@@ -1,0 +1,149 @@
+import 'package:bonfire/bonfire.dart';
+import 'package:dino_game/components/enemys/sprite_enemys/sprite_enemy.dart';
+
+class BlueDino extends SimpleEnemy
+    with AutomaticRandomMovement, ObjectCollision {
+  BlueDino()
+      : super(
+          position: Vector2(45 * 5, 50 * 5),
+          size: Vector2(32, 32),
+          animation: SimpleDirectionAnimation(
+            idleRight: BlueSprite.idleRight,
+            runRight: BlueSprite.runRight,
+            idleLeft: BlueSprite.idleLeft,
+            runLeft: BlueSprite.runLeft,
+          ),
+        ) {
+    setupCollision(CollisionConfig(
+      collisions: [
+        CollisionArea.rectangle(
+          size: Vector2(20, 20),
+          align: Vector2(6, 15),
+        )
+      ],
+    ));
+  }
+  @override
+  void update(dt) {
+    runRandomMovement(
+      10,
+      maxDistance: 128,
+      minDistance: 0,
+      runOnlyVisibleInCamera: false,
+      speed: 10,
+      timeKeepStopped: 2000,
+    );
+    super.update(0.1);
+  }
+}
+
+class RedDino extends SimpleEnemy
+    with AutomaticRandomMovement, ObjectCollision {
+  RedDino()
+      : super(
+          position: Vector2(50 * 5, 50 * 5),
+          size: Vector2(32, 32),
+          animation: SimpleDirectionAnimation(
+            idleRight: RedSprite.idleRight,
+            runRight: RedSprite.runRight,
+            idleLeft: RedSprite.idleLeft,
+            runLeft: RedSprite.runLeft,
+          ),
+        ) {
+    setupCollision(CollisionConfig(
+      collisions: [
+        CollisionArea.rectangle(
+          size: Vector2(20, 20),
+          align: Vector2(6, 15),
+        )
+      ],
+    ));
+  }
+  @override
+  void update(dt) {
+    runRandomMovement(
+      10,
+      maxDistance: 128,
+      minDistance: 0,
+      runOnlyVisibleInCamera: false,
+      speed: 10,
+      timeKeepStopped: 2000,
+    );
+    super.update(0.1);
+  }
+}
+
+class PinkDino extends SimpleEnemy
+    with AutomaticRandomMovement, ObjectCollision {
+  PinkDino()
+      : super(
+          position: Vector2(60 * 5, 50 * 5),
+          size: Vector2(32, 32),
+          animation: SimpleDirectionAnimation(
+            idleRight: PinkSprite.idleRight,
+            runRight: PinkSprite.runRight,
+            idleLeft: PinkSprite.idleLeft,
+            runLeft: PinkSprite.runLeft,
+          ),
+        ) {
+    setupCollision(CollisionConfig(
+      collisions: [
+        CollisionArea.rectangle(
+          size: Vector2(20, 20),
+          align: Vector2(6, 15),
+        )
+      ],
+    ));
+  }
+  @override
+  void update(dt) {
+    runRandomMovement(
+      10,
+      maxDistance: 128,
+      minDistance: 0,
+      runOnlyVisibleInCamera: false,
+      speed: 10,
+      timeKeepStopped: 2000,
+    );
+    super.update(0.1);
+  }
+}
+
+class YellowDino extends SimpleEnemy
+    with AutomaticRandomMovement, ObjectCollision {
+  YellowDino()
+      : super(
+          position: Vector2(50 * 5, 40 * 5),
+          size: Vector2(32, 32),
+          animation: SimpleDirectionAnimation(
+            idleRight: YellowSprite.idleRight,
+            runRight: YellowSprite.runRight,
+            idleLeft: YellowSprite.idleLeft,
+            runLeft: YellowSprite.runLeft,
+          ),
+        ) {
+    setupCollision(
+      CollisionConfig(
+        collisions: [
+          CollisionArea.rectangle(
+            size: Vector2(20, 20),
+            align: Vector2(6, 15),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  void update(dt) {
+    runRandomMovement(
+      10,
+      maxDistance: 32,
+      minDistance: 32,
+      runOnlyVisibleInCamera: false,
+      speed: 10,
+      timeKeepStopped: 2000,
+    );
+    super.update(0.1);
+  }
+}
