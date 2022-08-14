@@ -27,10 +27,8 @@ class DinoPlayer extends SimplePlayer with ObjectCollision {
   DinoPlayer()
       : super(
           position: Vector2(50 * 5, 80 * 5),
-          size: Vector2(
-            32,
-            32,
-          ),
+          size: Vector2(32, 32),
+          life: 1,
           animation: SimpleDirectionAnimation(
             idleRight: DinoSprite.idleRight,
             runRight: DinoSprite.runRight,
@@ -50,5 +48,10 @@ class DinoPlayer extends SimplePlayer with ObjectCollision {
         ],
       ),
     );
+  }
+  @override
+  void die() async {
+    removeFromParent();
+    super.die();
   }
 }
