@@ -1,16 +1,19 @@
-# dino_game
+# Dino Game
 
-A new Flutter project.
+Jogo desenvolvido como teste técnico 02.
 
-## Getting Started
+## Como jogar:
 
-This project is a starting point for a Flutter application.
+* Utilize as setas direcionais ou as teclas W,A,S,D.
+* Colete todas as moedas para finalizar o jogo.
+* Cuidado! Existem dinossauros gananciosos que vão tem impedir de pegar as moedas.
+* ~Coma as frutinhas mágicas para obliterar seus inimigos.~
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Sobre o jogo:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Programação e Animação por: Guilherme Henrique Marcondes de Souza.
+
+Arte de: Marcello Marcondes de Souza.
+
+(_chão, itens, personagem, obstáculos colidiveis e suas respectivas animações são artes originais._) 
