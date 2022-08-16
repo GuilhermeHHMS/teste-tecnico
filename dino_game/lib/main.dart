@@ -10,6 +10,7 @@ void main() {
   runApp(
     const MaterialApp(
       home: Starter(),
+      debugShowCheckedModeBanner: false,
     ),
   );
   BonfireInjector.instance.put((i) => BlueDinoController());
@@ -45,6 +46,11 @@ class _StarterState extends State<Starter> {
       ),
       player: DinoPlayer(),
       joystick: Joystick(
+        directional: JoystickDirectional(
+            isFixed: true,
+            size: MediaQuery.of(context).size.height * 0.15,
+            margin: const EdgeInsets.all(80),
+            color: Colors.red),
         keyboardConfig: KeyboardConfig(
           keyboardDirectionalType: KeyboardDirectionalType.wasdAndArrows,
           enable: true,
