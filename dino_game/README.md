@@ -11,7 +11,7 @@ Jogo desenvolvido como teste técnico 02.
 
 ## Como executar:
 
-* Executar o 'main.dart', de preferencia, em janela do Windows.
+* Abra o projeto em um editor de código. Execute os arquivos da pasta lib, de preferencia, em janela do Windows ou navegador Chrome.
 
 ## Sobre o jogo:
 
