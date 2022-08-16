@@ -11,7 +11,7 @@ Jogo desenvolvido como teste técnico 02.
 
 ## Como executar:
 
-* Abra o projeto em um editor de código. Execute os arquivos da pasta lib, de preferencia, em janela do Windows ou navegador Chrome.
+* Abra o projeto em um editor de código. Execute os arquivos da pasta lib, de preferencia, em um emulador de dispositivo móvel ou um dispositivo físico.
 
 ## Sobre o jogo:
 
