@@ -1,14 +1,26 @@
 import 'package:bonfire/bonfire.dart';
+import 'package:dino_game/components/controllers/dino_controllers.dart';
 import 'package:dino_game/components/enemys/sprite_enemys/sprite_enemy.dart';
 import 'package:dino_game/components/player/dino_player.dart';
 import 'package:dino_game/main.dart';
 
+List<Vector2> res = [
+  Vector2(32 * 18, 32 * 19),
+  Vector2(32 * 19, 32 * 18),
+  Vector2(32 * 20, 32 * 19),
+  Vector2(32 * 19, 32 * 20),
+];
+
 class BlueDino extends SimpleEnemy
-    with AutomaticRandomMovement, ObjectCollision {
-  BlueDino()
+    with
+        AutomaticRandomMovement,
+        ObjectCollision,
+        UseStateController<BlueDinoController> {
+  BlueDino(Vector2 position)
       : super(
-          position: Vector2(45 * 5, 50 * 5),
+          position: position,
           size: Vector2(32, 32),
+          life: 10,
           speed: 1,
           animation: SimpleDirectionAnimation(
             idleRight: BlueSprite.idleRight,
@@ -16,7 +28,6 @@ class BlueDino extends SimpleEnemy
             idleLeft: BlueSprite.idleLeft,
             runLeft: BlueSprite.runLeft,
           ),
-          life: 1,
         ) {
     setupCollision(CollisionConfig(
       collisions: [
@@ -32,18 +43,23 @@ class BlueDino extends SimpleEnemy
     runRandomMovement(
       10,
       maxDistance: 128,
+      minDistance: 64,
       runOnlyVisibleInCamera: false,
       speed: 10,
-      timeKeepStopped: 2000,
+      timeKeepStopped: 0,
     );
 
     seeAndMoveToPlayer(
       closePlayer: (player) {
-        if (onCollision(DinoPlayer(), true)) {
+        if (activePower == false) {
           simpleAttackMelee(
             damage: 10,
             size: Vector2(40, 40),
           );
+        } else {
+          removeFromParent();
+          score += 100;
+          controller.respawn(res[0]);
         }
       },
       radiusVision: tileSize * 20,
@@ -53,11 +69,15 @@ class BlueDino extends SimpleEnemy
 }
 
 class RedDino extends SimpleEnemy
-    with AutomaticRandomMovement, ObjectCollision {
-  RedDino()
+    with
+        AutomaticRandomMovement,
+        ObjectCollision,
+        UseStateController<RedDinoController> {
+  RedDino(Vector2 position)
       : super(
-          position: Vector2(50 * 5, 50 * 5),
+          position: position,
           speed: 1,
+          life: 10,
           size: Vector2(32, 32),
           animation: SimpleDirectionAnimation(
             idleRight: RedSprite.idleRight,
@@ -79,19 +99,23 @@ class RedDino extends SimpleEnemy
   void update(dt) {
     runRandomMovement(
       10,
-      maxDistance: 32,
-      minDistance: 32,
+      maxDistance: 128,
+      minDistance: 64,
       runOnlyVisibleInCamera: false,
       speed: 10,
-      timeKeepStopped: 2000,
+      timeKeepStopped: 0,
     );
     seeAndMoveToPlayer(
       closePlayer: (player) {
-        if (onCollision(DinoPlayer(), true)) {
+        if (activePower == false) {
           simpleAttackMelee(
             damage: 10,
             size: Vector2(40, 40),
           );
+        } else {
+          removeFromParent();
+          score += 100;
+          controller.respawn(res[1]);
         }
       },
       radiusVision: tileSize * 20,
@@ -101,11 +125,15 @@ class RedDino extends SimpleEnemy
 }
 
 class PinkDino extends SimpleEnemy
-    with AutomaticRandomMovement, ObjectCollision {
-  PinkDino()
+    with
+        AutomaticRandomMovement,
+        ObjectCollision,
+        UseStateController<PinkDinoController> {
+  PinkDino(Vector2 position)
       : super(
-          position: Vector2(60 * 5, 50 * 5),
+          position: position,
           speed: 1,
+          life: 10,
           size: Vector2(32, 32),
           animation: SimpleDirectionAnimation(
             idleRight: PinkSprite.idleRight,
@@ -127,33 +155,42 @@ class PinkDino extends SimpleEnemy
   void update(dt) {
     runRandomMovement(
       10,
-      maxDistance: 32,
-      minDistance: 32,
+      maxDistance: 128,
+      minDistance: 64,
       runOnlyVisibleInCamera: false,
       speed: 10,
-      timeKeepStopped: 2000,
+      timeKeepStopped: 0,
     );
     seeAndMoveToPlayer(
       closePlayer: (player) {
-        if (onCollision(DinoPlayer(), true)) {
+        if (activePower == false) {
           simpleAttackMelee(
             damage: 10,
             size: Vector2(40, 40),
           );
+        } else {
+          removeFromParent();
+          score += 100;
+          controller.respawn(res[2]);
         }
       },
       radiusVision: tileSize * 20,
     );
+
     super.update(0.1);
   }
 }
 
 class YellowDino extends SimpleEnemy
-    with AutomaticRandomMovement, ObjectCollision {
-  YellowDino()
+    with
+        AutomaticRandomMovement,
+        ObjectCollision,
+        UseStateController<YellowDinoController> {
+  YellowDino(Vector2 position)
       : super(
-          position: Vector2(50 * 5, 40 * 5),
+          position: position,
           speed: 1,
+          life: 10,
           size: Vector2(32, 32),
           animation: SimpleDirectionAnimation(
             idleRight: YellowSprite.idleRight,
@@ -176,25 +213,31 @@ class YellowDino extends SimpleEnemy
 
   @override
   void update(dt) {
-    runRandomMovement(
-      10,
-      maxDistance: 32,
-      minDistance: 32,
-      runOnlyVisibleInCamera: false,
-      speed: 10,
-      timeKeepStopped: 10,
-    );
+    runRandomMovement(10,
+        maxDistance: 128,
+        minDistance: 64,
+        runOnlyVisibleInCamera: false,
+        speed: 10,
+        timeKeepStopped: 0);
     seeAndMoveToPlayer(
       closePlayer: (player) {
-        if (onCollision(DinoPlayer(), true)) {
-          simpleAttackMelee(
-            damage: 10,
-            size: Vector2(40, 40),
-          );
-        }
+        _touch();
       },
       radiusVision: tileSize * 20,
     );
     super.update(0.1);
+  }
+
+  void _touch() {
+    if (activePower == false) {
+      simpleAttackMelee(
+        damage: 10,
+        size: Vector2(40, 40),
+      );
+    } else {
+      removeFromParent();
+      score += 100;
+      controller.respawn(res[3]);
+    }
   }
 }

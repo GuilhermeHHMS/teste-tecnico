@@ -12,22 +12,21 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":0
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":1
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":2
                 }],
          "id":0,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -62,22 +61,21 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":4
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":10
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":16
                 }],
          "id":4,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -112,26 +110,25 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":5
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":5
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":11
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":17
                 }],
          "id":5,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -166,26 +163,25 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":6
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":7
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":8
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":9
                 }],
          "id":6,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -209,26 +205,25 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":12
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":13
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":14
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":15
                 }],
          "id":12,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -252,22 +247,21 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":18
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":19
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":20
                 }],
          "id":18,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -302,22 +296,21 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":21
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":22
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":23
                 }],
          "id":21,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -352,22 +345,21 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":24
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":25
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":26
                 }],
          "id":24,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -402,22 +394,21 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":30
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":31
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":32
                 }],
          "id":30,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -463,22 +454,21 @@
         {
          "animation":[
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":36
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":37
                 }, 
                 {
-                 "duration":300,
+                 "duration":100,
                  "tileid":38
                 }],
          "id":36,
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {

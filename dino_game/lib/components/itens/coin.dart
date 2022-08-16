@@ -1,6 +1,7 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:dino_game/components/itens/itens_sprite_sheet.dart';
 import 'package:dino_game/main.dart';
+import 'package:flutter/material.dart';
 
 class Coin extends GameDecoration with Sensor {
   double dt = 0;
@@ -20,6 +21,25 @@ class Coin extends GameDecoration with Sensor {
   @override
   void onContact(GameComponent component) {
     if (component is Player) {
+      score += 10;
+      if (gameRef.decorations().length == 4) {
+        showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                content: Card(
+                  margin: const EdgeInsets.all(20),
+                  elevation: 0,
+                  child: Text(
+                    'Parabéns! Você ganhou!\nSeu Score é: $score',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              );
+            });
+      }
       removeFromParent();
     }
   }

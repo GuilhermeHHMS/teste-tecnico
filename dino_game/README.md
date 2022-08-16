@@ -1,13 +1,16 @@
-# Dino Game
+# dino_game
 
-Um jogo simples, onde o jogador controla um dinossauro em uma arena pré-histórica cheia de inimigos.
+A new Flutter project.
 
-<em breve mais detalhes>
+## Getting Started
 
-## Curiosidades
+This project is a starting point for a Flutter application.
 
-* As paredes e os personagens são 100% originais.
+A few resources to get you started if this is your first Flutter project:
 
-* O jogo é construido com o package Bonfire.
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-* O mapa foi desenhado no software Tiled.
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

@@ -1,9 +1,9 @@
-{ "columns":4,
- "image":"final_bot_hills.png",
- "imageheight":32,
- "imagewidth":64,
+{ "columns":2,
+ "image":"vertical_final_lava_stream.png",
+ "imageheight":64,
+ "imagewidth":32,
  "margin":0,
- "name":"final_bot_hills",
+ "name":"vertical_final_lava_stream",
  "spacing":0,
  "tilecount":8,
  "tiledversion":"1.9.1",
@@ -17,32 +17,33 @@
                 }, 
                 {
                  "duration":100,
-                 "tileid":1
-                }, 
-                {
-                 "duration":100,
                  "tileid":2
                 }, 
                 {
                  "duration":100,
-                 "tileid":3
+                 "tileid":4
+                }, 
+                {
+                 "duration":100,
+                 "tileid":6
                 }],
          "id":0,
          "objectgroup":
             {
              "draworder":"index",
+             "id":2,
              "name":"",
              "objects":[
                     {
                      "class":"",
-                     "height":9.75,
-                     "id":1,
+                     "height":5.81818181818182,
+                     "id":2,
                      "name":"",
                      "rotation":0,
                      "visible":true,
-                     "width":6.1875,
-                     "x":4.8125,
-                     "y":-0.125
+                     "width":11.2727272727273,
+                     "x":-0.363636363636363,
+                     "y":5
                     }],
              "opacity":1,
              "type":"objectgroup",
@@ -55,7 +56,11 @@
          "animation":[
                 {
                  "duration":100,
-                 "tileid":4
+                 "tileid":1
+                }, 
+                {
+                 "duration":100,
+                 "tileid":3
                 }, 
                 {
                  "duration":100,
@@ -63,28 +68,25 @@
                 }, 
                 {
                  "duration":100,
-                 "tileid":6
-                }, 
-                {
-                 "duration":100,
                  "tileid":7
                 }],
-         "id":4,
+         "id":1,
          "objectgroup":
             {
              "draworder":"index",
+             "id":2,
              "name":"",
              "objects":[
                     {
                      "class":"",
-                     "height":11,
+                     "height":5.90909090909091,
                      "id":1,
                      "name":"",
                      "rotation":0,
                      "visible":true,
-                     "width":5.8125,
-                     "x":5.0625,
-                     "y":5.125
+                     "width":12.0909090909091,
+                     "x":4,
+                     "y":5.09090909090909
                     }],
              "opacity":1,
              "type":"objectgroup",
