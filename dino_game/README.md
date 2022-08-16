@@ -2,13 +2,16 @@
 
 Jogo desenvolvido como teste técnico 02.
 
-## Como jogar:
+## Regras do jogo:
 
 * Utilize as setas direcionais ou as teclas W,A,S,D.
 * Colete todas as moedas para finalizar o jogo.
-* Cuidado! Existem dinossauros gananciosos que vão tem impedir de pegar as moedas.
+* Cuidado! Existem dinossauros gananciosos que vão tentar te impedir de pegar as moedas.
 * ~Coma as frutinhas mágicas para obliterar seus inimigos.~
 
+## Como executar:
+
+* Executar o 'main.dart', de preferencia, em janela do Windows.
 
 ## Sobre o jogo:
 
