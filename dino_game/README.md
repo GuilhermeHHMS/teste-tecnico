@@ -20,3 +20,10 @@ Programação e Animação por: Guilherme Henrique Marcondes de Souza.
 Arte de: Marcello Marcondes de Souza.
 
 (_chão, itens, personagem, obstáculos colidiveis e suas respectivas animações são artes originais._) 
+
+## outros...
+
+Durante o desenvolvimento, Tive os seguintes problemas:
+
+- Ao tocar a fruta, o personagem ganha a habilidade de devorar os outros dinossauros por tempo limitado porém, a fruta some somente com o termino do efeito. 
+- problemas com a animação da habilidade ao consumir a fruta.
