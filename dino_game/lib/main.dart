@@ -13,13 +13,13 @@ void main() {
       debugShowCheckedModeBanner: false,
     ),
   );
+
   BonfireInjector.instance.put((i) => BlueDinoController());
   BonfireInjector.instance.put((i) => RedDinoController());
   BonfireInjector.instance.put((i) => PinkDinoController());
   BonfireInjector.instance.put((i) => YellowDinoController());
 }
 
-const double tileSize = 32;
 int score = 0;
 bool activePower = false;
 
@@ -35,14 +35,16 @@ class _StarterState extends State<Starter> {
 
   @override
   Widget build(BuildContext context) {
-    return BonfireTiledWidget(
-      map: TiledWorldMap(
+    Vector2 tileSize = Vector2(32, 32);
+
+    return BonfireWidget(
+      map: WorldMapByTiled(
         'arena.json',
         objectsBuilder: {
           'coin': (properties) => Coin(properties.position),
           'buff': (properties) => Buff(properties.position),
         },
-        forceTileSize: const Size(tileSize, tileSize),
+        forceTileSize: tileSize,
       ),
       player: DinoPlayer(),
       joystick: Joystick(

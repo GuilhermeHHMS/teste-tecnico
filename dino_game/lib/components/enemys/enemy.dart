@@ -1,7 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:dino_game/components/controllers/dino_controllers.dart';
 import 'package:dino_game/components/enemys/sprite_enemys/sprite_enemy.dart';
-import 'package:dino_game/components/player/dino_player.dart';
 import 'package:dino_game/main.dart';
 
 List<Vector2> res = [
@@ -62,7 +61,7 @@ class BlueDino extends SimpleEnemy
           controller.respawn(res[0]);
         }
       },
-      radiusVision: tileSize * 20,
+      radiusVision: 32 * 20,
     );
     super.update(0.1);
   }
@@ -118,7 +117,7 @@ class RedDino extends SimpleEnemy
           controller.respawn(res[1]);
         }
       },
-      radiusVision: tileSize * 20,
+      radiusVision: 32 * 20,
     );
     super.update(0.1);
   }
@@ -174,7 +173,7 @@ class PinkDino extends SimpleEnemy
           controller.respawn(res[2]);
         }
       },
-      radiusVision: tileSize * 20,
+      radiusVision: 32 * 20,
     );
 
     super.update(0.1);
@@ -223,7 +222,7 @@ class YellowDino extends SimpleEnemy
       closePlayer: (player) {
         _touch();
       },
-      radiusVision: tileSize * 20,
+      radiusVision: 32 * 20,
     );
     super.update(0.1);
   }
